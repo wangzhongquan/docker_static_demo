@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+</head>
+
+<body>
+    <div>
+        okok00
+    </div>
+    <div id="md"></div>
+
+    <button id="btn">获取token</button>
+
+    <script>
+        $("#md").html("wzq");
+        $("#btn").on('click', function () {
+            var url = "/api/account/login"
+            $.ajax({
+                method:"post",
+                url: url,
+                data: {
+                    "username": "wzq",
+                    "password": "123"
+                },
+                success: function (data) {
+                    console.log(data)
+                },
+            })
+        })
+    </script>
+</body>
+
+</html>
